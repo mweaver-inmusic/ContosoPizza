@@ -32,9 +32,12 @@ namespace ContosoPizza
             options.AddPolicy(name: MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000")
-                                        .AllowAnyHeader()
-                                        .AllowAnyMethod();
+                    builder.WithOrigins(
+                        "http://localhost:3000",
+                        "https://react-contoso-pizza.netlify.app/"
+                    )
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
                 });
             });
             services.AddControllers();
