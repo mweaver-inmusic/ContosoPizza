@@ -28,13 +28,12 @@ namespace ContosoPizza
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
-        {
-            options.AddPolicy(name: MyAllowSpecificOrigins,
-                builder =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
                 {
                     builder.WithOrigins(
                         "http://localhost:3000",
-                        "https://react-contoso-pizza.netlify.app/"
+                        "https://react-contoso-pizza.netlify.app"
                     )
                     .AllowAnyHeader()
                     .AllowAnyMethod();
