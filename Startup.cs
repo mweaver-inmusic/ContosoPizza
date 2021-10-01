@@ -10,6 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ContosoPizza.Models;
+using ContosoPizza.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoPizza
 {
@@ -27,6 +30,9 @@ namespace ContosoPizza
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<PizzaDbContext>(x => 
+                x.UseNpgsql(Configuration.GetConnectionString("Default"))
+            );
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder =>

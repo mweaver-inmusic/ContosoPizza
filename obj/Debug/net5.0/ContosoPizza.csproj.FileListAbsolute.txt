@@ -31,3 +31,12 @@ C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\System.Web.Cors.dll
 C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\System.Net.Http.Formatting.dll
 C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\System.Web.Http.dll
 C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\System.Web.Http.Cors.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Humanizer.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Npgsql.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\MWeaver\Documents\C#\ContosoPizza\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
