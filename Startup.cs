@@ -1,3 +1,4 @@
+using System.Data.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using ContosoPizza.Models;
 using ContosoPizza.Data;
 using Microsoft.EntityFrameworkCore;
+using ContosoPizza.Static;
 
 namespace ContosoPizza
 {
@@ -31,7 +33,7 @@ namespace ContosoPizza
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PizzaDbContext>(x => 
-                x.UseNpgsql(Configuration.GetConnectionString("Default"))
+                x.UseNpgsql(ConnectionStringBuilder.GetHerokuPostgresqlDbConnectionString())
             );
             services.AddCors(options =>
             {
