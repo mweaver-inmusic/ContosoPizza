@@ -8,9 +8,15 @@ namespace ContosoPizza.Controllers
     public class EnvironmentController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        public DbUrl Get()
         {
-            return Environment.GetEnvironmentVariable("DATABASE_URL");
+            var dburl = Environment.GetEnvironmentVariable("DATABASE_URL");
+            return new DbUrl { Str = dburl };
         }
+    }
+
+    public class DbUrl
+    {
+        public string Str { get; set; }
     }
 }
