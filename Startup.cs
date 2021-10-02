@@ -32,6 +32,9 @@ namespace ContosoPizza
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<PizzaDbContext>(x => 
+            //     x.UseNpgsql(Configuration.GetConnectionString("Default"))
+            // );
             services.AddDbContext<PizzaDbContext>(x => 
                 x.UseNpgsql(ConnectionStringBuilder.GetHerokuPostgresqlDbConnectionString())
             );
