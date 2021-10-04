@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ContosoPizza.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace ContosoPizza.Data
 {
-    public class PizzaDbContext : DbContext
+    public class PizzaDbContext : IdentityDbContext
     {
         public PizzaDbContext(DbContextOptions<PizzaDbContext> options) : base(options)
         {            

@@ -1,2 +1,2 @@
-obj
-obj\Debug
+obj/*
+bin/*

@@ -15,6 +15,7 @@ using ContosoPizza.Models;
 using ContosoPizza.Data;
 using Microsoft.EntityFrameworkCore;
 using ContosoPizza.Static;
+using Microsoft.AspNetCore.Identity;
 
 namespace ContosoPizza
 {
@@ -32,12 +33,15 @@ namespace ContosoPizza
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<PizzaDbContext>(x => 
-            //     x.UseNpgsql(Configuration.GetConnectionString("Default"))
-            // );
             services.AddDbContext<PizzaDbContext>(x => 
-                x.UseNpgsql(ConnectionStringBuilder.GetHerokuPostgresqlDbConnectionString())
+                x.UseNpgsql(Configuration.GetConnectionString("Default"))
             );
+            // services.AddDbContext<PizzaDbContext>(x => 
+            //     x.UseNpgsql(ConnectionStringBuilder.GetHerokuPostgresqlDbConnectionString())
+            // );
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<PizzaDbContext>();
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
@@ -50,6 +54,7 @@ namespace ContosoPizza
                     .AllowAnyMethod();
                 });
             });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

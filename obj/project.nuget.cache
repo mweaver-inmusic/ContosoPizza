@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GJxht/UM5yMSAlnfAPyINK4BTpc7iTkHwk/vqT/wK75pJ4Eu6Mof+bVQOmtIBQT/CtSndY5HPp7OrXhLjC+c+g==",
+  "dgSpecHash": "NCpjCZp8wuWDV8Z3YA856whmiNgshmDDbDg4h3AUkg6cUjL4gF+eG/npvhPtrlDyKi7dLeyWmjMa5XMW8TYTEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\MWeaver\\Documents\\C#\\ContosoPizza\\ContosoPizza.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.0.0\\microsoft.aspnet.webapi.client.5.0.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.0.0\\microsoft.aspnet.webapi.core.5.0.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnet.webapi.cors\\5.0.1\\microsoft.aspnet.webapi.cors.5.0.1.nupkg.sha512",
+    "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.10\\microsoft.aspnetcore.cryptography.internal.5.0.10.nupkg.sha512",
+    "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.10\\microsoft.aspnetcore.cryptography.keyderivation.5.0.10.nupkg.sha512",
+    "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
@@ -21,6 +24,8 @@
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.10\\microsoft.extensions.identity.core.5.0.10.nupkg.sha512",
+    "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.10\\microsoft.extensions.identity.stores.5.0.10.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\MWeaver\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
