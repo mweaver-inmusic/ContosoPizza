@@ -39,7 +39,7 @@ namespace ContosoPizza
             // services.AddDbContext<PizzaDbContext>(x => 
             //     x.UseNpgsql(ConnectionStringBuilder.GetHerokuPostgresqlDbConnectionString())
             // );
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<PizzaDbContext>();
 
             services.AddCors(options =>

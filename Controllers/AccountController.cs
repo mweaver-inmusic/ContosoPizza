@@ -9,10 +9,21 @@ namespace ContosoPizza.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> PostAsync(Login login)
+        {
+            var user = await _userManager.FindByEmailAsync(login.Email);
+            var result = await _signInManager.CheckPasswordSignInAsync(user, login.Password, false);
+            if(!result.Succeeded) return BadRequest();
+            return Ok(login);
         }
 
         [HttpPost("register")]
@@ -23,6 +34,12 @@ namespace ContosoPizza.Controllers
             if(!result.Succeeded) return BadRequest();
             return Ok(register);
         }
+    }
+
+    public class Login
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 
     public class Register
