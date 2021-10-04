@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\MWeaver\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\MWeaver\\.nuget\\packages"
-    ]
-  }
-}
