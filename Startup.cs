@@ -16,6 +16,11 @@ using ContosoPizza.Data;
 using Microsoft.EntityFrameworkCore;
 using ContosoPizza.Static;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using ContosoPizza.Interfaces;
+using ContosoPizza.Services;
 
 namespace ContosoPizza
 {
@@ -41,6 +46,21 @@ namespace ContosoPizza
             // );
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<PizzaDbContext>();
+
+            services.AddAuthentication(options => options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options => 
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:Key"])),
+                        ValidIssuer = Configuration["Token:Issuer"],
+                        ValidateIssuer = true,
+                        ValidateAudience = false
+                    };
+                });
+
+            services.AddScoped<ITokenService, TokenService>();
 
             services.AddCors(options =>
             {
@@ -74,6 +94,7 @@ namespace ContosoPizza
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseCors(MyAllowSpecificOrigins);
